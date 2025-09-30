@@ -93,7 +93,7 @@ The Quiz Application is broken down into **independent microservices** to improv
    cd service-registry
    mvn spring-boot:run
 
- Runs on port 8761
+  Runs on port 8761
 
 3. **Start Question Service:**
    ```bash
@@ -112,7 +112,7 @@ The Quiz Application is broken down into **independent microservices** to improv
    cd api-gateway
    mvn spring-boot:run
 
- Runs on port 8745
+  Runs on port 8745
 
 ## 5. API Documentation
 
@@ -193,17 +193,17 @@ POST	/submit/{id}
 ## 6. Microservices Concepts & Design
 ### 📌 Service Registry (Eureka)
 
-Service Name: service-registry
+**Service Name:** service-registry
 
-Port: 8761
+**Port:** 8761
 
 Central hub for service discovery
 
 ### 📌 API Gateway (Spring Cloud Gateway)
 
-Service Name: api-gateway
+**Service Name:** api-gateway
 
-Port: 8745
+**Port:** 8745
 
 Single entry point for all client requests
 
