@@ -88,31 +88,29 @@ The Quiz Application is broken down into **independent microservices** to improv
    git clone https://github.com/kr254na/Quiz-Application-Backend---Microservices.git
    cd quiz-application
 
-Start Service Registry:
-
+2. **Start Service Registry:**
+```bash
 cd service-registry
 mvn spring-boot:run
 
-
 Runs on port 8761
 
-Start Question Service:
-
+3. **Start Question Service:**
+```bash
 cd question-service
 mvn spring-boot:run
 
 
-Start Quiz Service:
-
+4. **Start Quiz Service:**
+```bash
 cd quiz-service
 mvn spring-boot:run
 
 
-Start API Gateway:
-
+5. **Start API Gateway:**
+```bash
 cd api-gateway
 mvn spring-boot:run
-
 
 Runs on port 8745
 
