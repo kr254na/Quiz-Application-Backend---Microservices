@@ -1,11 +1,11 @@
-🧠 Quiz Application Microservices
+# 🧠 Quiz Application Microservices
 
 A scalable and modular Quiz Application built using Spring Boot and a Microservices Architecture.
 It leverages Service Discovery (Eureka) and API Gateway (Spring Cloud Gateway) for robust, dynamic service communication and a unified entry point.
 
-📑 Table of Contents
+# 📑 Table of Contents
 
-Project Overview
+## Project Overview
 
 Microservices Architecture
 
