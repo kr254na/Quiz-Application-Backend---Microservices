@@ -129,12 +129,12 @@ http://localhost:8745
 
 ### 🔹 Question Service API
 
-Base Path (via Gateway):
+#### Base Path (via Gateway):
 ```http
 http://localhost:8745/question
 ```
 
-Method	Endpoint	Description
+#### Method	Endpoint	Description
 Retrieve all questions
 ```http
 GET	/allQuestions
@@ -168,17 +168,20 @@ Calculate final score for quiz
 POST	/getScore
 ```
 
-###🔹 Quiz Service API
+### 🔹 Quiz Service API
 
-Base Path (via Gateway): http://localhost:8745/quiz
+#### Base Path (via Gateway)
+```http
+http://localhost:8745/quiz
+```
 
-Method Endpoint	Description
-### Creates a quiz
-#### ( fetches questions from question-service )
+#### Method Endpoint	Description
+Creates a quiz
+( fetches questions from question-service )
 ```http
 POST	/create
 ```	
-### Get Quiz By Quiz Id
+Get Quiz By Quiz Id
 ```http
 GET	/get/{id}
 ```
@@ -188,7 +191,7 @@ POST	/submit/{id}
 ```
 
 ## 6. Microservices Concepts & Design
-📌 Service Registry (Eureka)
+### 📌 Service Registry (Eureka)
 
 Service Name: service-registry
 
@@ -196,7 +199,7 @@ Port: 8761
 
 Central hub for service discovery
 
-📌 API Gateway (Spring Cloud Gateway)
+### 📌 API Gateway (Spring Cloud Gateway)
 
 Service Name: api-gateway
 
@@ -206,13 +209,13 @@ Single entry point for all client requests
 
 Routes to services dynamically via Eureka
 
-📌 Load Balancing & Inter-Service Communication
+### 📌 Load Balancing & Inter-Service Communication
 
 Feign Client used for communication
 
 Load balancing automatically handled by Spring Cloud
 
-📌 Scalability and Horizontal Scaling
+### 📌 Scalability and Horizontal Scaling
 
 Each service runs independently
 
