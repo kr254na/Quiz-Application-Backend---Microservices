@@ -148,8 +148,10 @@ POST	/getScore	Calculates final score for quiz
 
 Base Path (via Gateway): http://localhost:8745/quiz
 
-Method	Endpoint	Description
-POST	/create	Creates a quiz (fetches questions from Question Service)
+Method Endpoint	Description
+### Creates a quiz
+## ( fetches questions from question-service )
+```http POST	/create```	
 GET	/get/{id}	Gets quiz questions by quiz ID
 POST	/submit/{id}	Submits quiz answers and calculates score
 
