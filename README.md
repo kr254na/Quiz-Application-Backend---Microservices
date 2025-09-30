@@ -89,30 +89,30 @@ The Quiz Application is broken down into **independent microservices** to improv
    cd quiz-application
 
 2. **Start Service Registry:**
-```bash
-cd service-registry
-mvn spring-boot:run
+   ```bash
+   cd service-registry
+   mvn spring-boot:run
 
-Runs on port 8761
+   Runs on port 8761
 
 3. **Start Question Service:**
-```bash
-cd question-service
-mvn spring-boot:run
+   ```bash
+   cd question-service
+   mvn spring-boot:run
 
 
 4. **Start Quiz Service:**
-```bash
-cd quiz-service
-mvn spring-boot:run
+   ```bash
+   cd quiz-service
+   mvn spring-boot:run
 
 
 5. **Start API Gateway:**
-```bash
-cd api-gateway
-mvn spring-boot:run
+   ```bash
+   cd api-gateway
+   mvn spring-boot:run
 
-Runs on port 8745
+   Runs on port 8745
 
 ## 5. API Documentation
 
