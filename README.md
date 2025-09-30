@@ -125,26 +125,58 @@ Runs on port 8745
 
 ## 5. API Documentation
 
-All external API calls must go through the API Gateway (http://localhost:8745).
+All external API calls must go through the API Gateway 
+```http
+http://localhost:8745
+```
 
-🔹 API Gateway Endpoints
+### 🔹 API Gateway Endpoints
 Prefix	Target Microservice
 /question/**	question-service
 /quiz/**	quiz-service
-🔹 Question Service API
 
-Base Path (via Gateway): http://localhost:8745/question
+### 🔹 Question Service API
+
+Base Path (via Gateway):
+```http
+http://localhost:8745/question
+```
 
 Method	Endpoint	Description
-GET	/allQuestions	Retrieves all questions
-GET	/category/{domain}	Retrieves questions by category/domain
-POST	/add	Adds a new question (RequestBody: Question)
-PUT	/update	Updates an existing question
-DELETE	/delete/{id}	Deletes a question by ID
-GET	/generate	Generates list of questions for quiz
-POST	/getQuestions	Retrieves questions by IDs
-POST	/getScore	Calculates final score for quiz
-🔹 Quiz Service API
+Retrieve all questions
+```http
+GET	/allQuestions
+```
+Retrieves questions by category/domain
+```http
+GET	/category/{domain}	
+```
+Add a new question
+```http
+POST	/add (RequestBody: Question)
+```
+Update an existing question
+```http
+PUT	/update	
+```
+Delete a question by ID
+```http
+DELETE	/delete/{id}
+```
+Generate list of questions for quiz
+```http
+GET	/generate
+```
+Retrieve questions by IDs
+```http
+POST	/getQuestions	
+```
+Calculate final score for quiz
+```http
+POST	/getScore
+```
+
+###🔹 Quiz Service API
 
 Base Path (via Gateway): http://localhost:8745/quiz
 
@@ -158,7 +190,10 @@ POST	/create
 ```http
 GET	/get/{id}
 ```
-POST	/submit/{id}	Submits quiz answers and calculates score
+Submit quiz answers and calculates score
+```http
+POST	/submit/{id}	
+```
 
 ## 6. Microservices Concepts & Design
 📌 Service Registry (Eureka)
