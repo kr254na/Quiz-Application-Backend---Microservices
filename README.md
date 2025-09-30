@@ -24,7 +24,7 @@ It leverages **Service Discovery (Eureka)** and **API Gateway (Spring Cloud Gate
   - [Load Balancing & Inter-Service Communication](#📌-load-balancing--inter-service-communication)
   - [Scalability and Horizontal Scaling](#📌-scalability-and-horizontal-scaling)
 - [Project Structure](#7-project-structure)
-- [⭐ Contribution](#-contribution)
+- [ Contribution](#-contribution)
 
 ---
 
@@ -92,8 +92,8 @@ The Quiz Application is broken down into **independent microservices** to improv
    ```bash
    cd service-registry
    mvn spring-boot:run
-
-  Runs on port 8761
+   ```
+   Runs on port 8761
 
 3. **Start Question Service:**
    ```bash
@@ -111,8 +111,8 @@ The Quiz Application is broken down into **independent microservices** to improv
    ```bash
    cd api-gateway
    mvn spring-boot:run
-
-  Runs on port 8745
+   ```
+   Runs on port 8745
 
 ## 5. API Documentation
 
@@ -224,6 +224,7 @@ Can deploy multiple instances of high-demand services
 Eureka + Gateway + Feign enable dynamic scaling
 
 ## 7. Project Structure
+```bash
 /Quiz-Application-Root
 ├── api-gateway
 │   └── src/main/java/com/krishna/api_gateway/
@@ -233,7 +234,7 @@ Eureka + Gateway + Feign enable dynamic scaling
 │   └── src/main/java/com/krishna/question_service/
 └── quiz-service
     └── src/main/java/com/krishna/quiz_service/
-
+```
 # ⭐ Contribution
 
 Feel free to fork this repo, raise issues, and submit pull requests!
