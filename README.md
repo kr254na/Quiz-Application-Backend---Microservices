@@ -150,9 +150,14 @@ Base Path (via Gateway): http://localhost:8745/quiz
 
 Method Endpoint	Description
 ### Creates a quiz
-## ( fetches questions from question-service )
-```http POST	/create```	
-GET	/get/{id}	Gets quiz questions by quiz ID
+#### ( fetches questions from question-service )
+```http
+POST	/create
+```	
+### Get Quiz By Quiz Id
+```http
+GET	/get/{id}
+```
 POST	/submit/{id}	Submits quiz answers and calculates score
 
 ## 6. Microservices Concepts & Design
