@@ -93,7 +93,7 @@ The Quiz Application is broken down into **independent microservices** to improv
    cd service-registry
    mvn spring-boot:run
 
-   Runs on port 8761
+ Runs on port 8761
 
 3. **Start Question Service:**
    ```bash
@@ -112,7 +112,7 @@ The Quiz Application is broken down into **independent microservices** to improv
    cd api-gateway
    mvn spring-boot:run
 
-   Runs on port 8745
+ Runs on port 8745
 
 ## 5. API Documentation
 
@@ -122,9 +122,10 @@ http://localhost:8745
 ```
 
 ### 🔹 API Gateway Endpoints
-Prefix	Target Microservice
-/question/**	question-service
-/quiz/**	quiz-service
+|    Prefix    | Target Microservice |
+|--------------|---------------------|
+| /question/** |   question-service  |  
+|   /quiz/**	 |     quiz-service    |
 
 ### 🔹 Question Service API
 
