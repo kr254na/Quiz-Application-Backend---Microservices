@@ -5,39 +5,39 @@ It leverages Service Discovery (Eureka) and API Gateway (Spring Cloud Gateway) f
 
 # 📑 Table of Contents
 
-### Project Overview
+#### Project Overview
 
-### Microservices Architecture
+#### Microservices Architecture
 
-Technology Stack
+#### Technology Stack
 
-Getting Started
+#### Getting Started
 
-Prerequisites
+#### Prerequisites
 
-Setup and Running
+#### Setup and Running
 
-API Documentation
+#### API Documentation
 
-API Gateway Endpoints
+#### API Gateway Endpoints
 
-Question Service API
+#### Question Service API
 
-Quiz Service API
+#### Quiz Service API
 
-Microservices Concepts & Design
+#### Microservices Concepts & Design
 
-Service Registry (Eureka)
+##### Service Registry (Eureka)
 
-API Gateway (Spring Cloud Gateway)
+#### API Gateway (Spring Cloud Gateway)
 
-Load Balancing & Inter-Service Communication
+#### Load Balancing & Inter-Service Communication
 
-Scalability and Horizontal Scaling
+#### Scalability and Horizontal Scaling
 
-Project Structure
+# Project Structure
 
-1. Project Overview
+## 1. Project Overview
 
 The Quiz Application is broken down into independent services to improve maintainability, scalability, and deployment flexibility.
 The core functionality includes:
@@ -51,7 +51,8 @@ service-registry	The Eureka Server for service registration and discovery.	8761
 api-gateway	The single entry point for all client requests.	8745
 question-service	Manages all CRUD operations for the question bank.	Auto-assigned
 quiz-service	Manages quiz creation, fetching questions, and score handling.	Auto-assigned
-2. Microservices Architecture
+
+## 2. Microservices Architecture
 
 Clients make requests only to the API Gateway
 
@@ -63,7 +64,7 @@ Services communicate internally using Feign Clients and logical service names
 
 Example: quiz-service fetches questions from question-service via Eureka
 
-3. Technology Stack
+## 3. Technology Stack
 
 Language: Java
 
@@ -77,7 +78,7 @@ Communication: OpenFeign Client
 
 Build Tool: Maven
 
-4. Getting Started
+## 4. Getting Started
 🔧 Prerequisites
 
 JDK 17+
@@ -122,7 +123,7 @@ mvn spring-boot:run
 
 Runs on port 8745
 
-5. API Documentation
+## 5. API Documentation
 
 All external API calls must go through the API Gateway (http://localhost:8745).
 
@@ -151,7 +152,8 @@ Method	Endpoint	Description
 POST	/create	Creates a quiz (fetches questions from Question Service)
 GET	/get/{id}	Gets quiz questions by quiz ID
 POST	/submit/{id}	Submits quiz answers and calculates score
-6. Microservices Concepts & Design
+
+## 6. Microservices Concepts & Design
 📌 Service Registry (Eureka)
 
 Service Name: service-registry
@@ -184,7 +186,7 @@ Can deploy multiple instances of high-demand services
 
 Eureka + Gateway + Feign enable dynamic scaling
 
-7. Project Structure
+## 7. Project Structure
 /Quiz-Application-Root
 ├── api-gateway
 │   └── src/main/java/com/krishna/api_gateway/
@@ -195,6 +197,6 @@ Eureka + Gateway + Feign enable dynamic scaling
 └── quiz-service
     └── src/main/java/com/krishna/quiz_service/
 
-⭐ Contribution
+# ⭐ Contribution
 
 Feel free to fork this repo, raise issues, and submit pull requests!
