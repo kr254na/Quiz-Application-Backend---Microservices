@@ -1,99 +1,92 @@
+
 # 🧠 Quiz Application Microservices
 
-A scalable and modular Quiz Application built using Spring Boot and a Microservices Architecture.
-It leverages Service Discovery (Eureka) and API Gateway (Spring Cloud Gateway) for robust, dynamic service communication and a unified entry point.
+A **scalable and modular Quiz Application** built using **Spring Boot** and a **Microservices Architecture**.  
+It leverages **Service Discovery (Eureka)** and **API Gateway (Spring Cloud Gateway)** for robust, dynamic service communication and a unified entry point.
 
-# 📑 Table of Contents
+---
 
-#### Project Overview
+## 📑 Table of Contents
 
-#### Microservices Architecture
+- [Project Overview](#1-project-overview)
+- [Microservices Architecture](#2-microservices-architecture)
+- [Technology Stack](#3-technology-stack)
+- [Getting Started](#4-getting-started)
+  - [Prerequisites](#🔧-prerequisites)
+  - [Setup and Running](#▶️-setup-and-running)
+- [API Documentation](#5-api-documentation)
+  - [API Gateway Endpoints](#🔹-api-gateway-endpoints)
+  - [Question Service API](#🔹-question-service-api)
+  - [Quiz Service API](#🔹-quiz-service-api)
+- [Microservices Concepts & Design](#6-microservices-concepts--design)
+  - [Service Registry (Eureka)](#📌-service-registry-eureka)
+  - [API Gateway (Spring Cloud Gateway)](#📌-api-gateway-spring-cloud-gateway)
+  - [Load Balancing & Inter-Service Communication](#📌-load-balancing--inter-service-communication)
+  - [Scalability and Horizontal Scaling](#📌-scalability-and-horizontal-scaling)
+- [Project Structure](#7-project-structure)
+- [⭐ Contribution](#-contribution)
 
-#### Technology Stack
-
-#### Getting Started
-
-#### Prerequisites
-
-#### Setup and Running
-
-#### API Documentation
-
-#### API Gateway Endpoints
-
-#### Question Service API
-
-#### Quiz Service API
-
-#### Microservices Concepts & Design
-
-##### Service Registry (Eureka)
-
-#### API Gateway (Spring Cloud Gateway)
-
-#### Load Balancing & Inter-Service Communication
-
-#### Scalability and Horizontal Scaling
-
-# Project Structure
+---
 
 ## 1. Project Overview
 
-The Quiz Application is broken down into independent services to improve maintainability, scalability, and deployment flexibility.
-The core functionality includes:
+The Quiz Application is broken down into **independent microservices** to improve maintainability, scalability, and deployment flexibility.  
 
-Managing a bank of questions
+**Core functionalities include:**
+- Managing a bank of questions
+- Creating and managing quizzes using those questions
 
-Creating and managing quizzes using those questions
+### Microservices Table
 
-Microservice	Description	Port
-service-registry	The Eureka Server for service registration and discovery.	8761
-api-gateway	The single entry point for all client requests.	8745
-question-service	Manages all CRUD operations for the question bank.	Auto-assigned
-quiz-service	Manages quiz creation, fetching questions, and score handling.	Auto-assigned
+| Microservice       | Description                                           | Port       |
+|--------------------|-------------------------------------------------------|------------|
+| **service-registry** | The Eureka Server for service registration/discovery | `8761`     |
+| **api-gateway**      | The single entry point for all client requests       | `8745`     |
+| **question-service** | Manages all CRUD operations for the question bank    | Auto-assigned |
+| **quiz-service**     | Manages quiz creation, fetching questions, scoring   | Auto-assigned |
+
+---
 
 ## 2. Microservices Architecture
 
-Clients make requests only to the API Gateway
+- Clients make requests **only to the API Gateway**
+- API Gateway routes to the appropriate microservice (e.g., **quiz-service**)
+- All microservices **register with Eureka**
+- Services communicate internally using **Feign Clients** and logical service names
 
-API Gateway routes to the appropriate microservice (e.g., quiz-service)
+**Example:**  
+`quiz-service` fetches questions from `question-service` via **Eureka**.
 
-All microservices register themselves with Eureka
-
-Services communicate internally using Feign Clients and logical service names
-
-Example: quiz-service fetches questions from question-service via Eureka
+---
 
 ## 3. Technology Stack
 
-Language: Java
+| Category           | Technology Used                         |
+|--------------------|------------------------------------------|
+| **Language**       | Java                                    |
+| **Frameworks**     | Spring Boot, Spring Cloud               |
+| **Service Discovery** | Spring Cloud Netflix Eureka           |
+| **API Gateway**    | Spring Cloud Gateway                    |
+| **Communication**  | OpenFeign Client                        |
+| **Build Tool**     | Maven                                   |
 
-Frameworks: Spring Boot, Spring Cloud
-
-Service Discovery: Spring Cloud Netflix Eureka
-
-API Gateway: Spring Cloud Gateway
-
-Communication: OpenFeign Client
-
-Build Tool: Maven
+---
 
 ## 4. Getting Started
-🔧 Prerequisites
 
-JDK 17+
+### 🔧 Prerequisites
+- JDK **17+**
+- Maven **3.6+**
+- IDE (IntelliJ IDEA, Eclipse, VS Code)
 
-Maven 3.6+
+---
 
-IDE (e.g., IntelliJ IDEA, Eclipse, VS Code)
+### ▶️ Setup and Running
 
-▶️ Setup and Running
-
-Clone the repository:
-
-git clone https://github.com/kr254na/Quiz-Application-Backend---Microservices.git
-cd quiz-application
-
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/kr254na/Quiz-Application-Backend---Microservices.git
+   cd quiz-application
 
 Start Service Registry:
 
