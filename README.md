@@ -5,9 +5,9 @@ It leverages Service Discovery (Eureka) and API Gateway (Spring Cloud Gateway) f
 
 # 📑 Table of Contents
 
-## Project Overview
+### Project Overview
 
-Microservices Architecture
+### Microservices Architecture
 
 Technology Stack
 
